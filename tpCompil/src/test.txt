@@ -1,0 +1,1 @@
+    private class_SJ Test{ int_SJ a,b; float_SJ c; string_SJ d; main_SJ{ a := b;}}

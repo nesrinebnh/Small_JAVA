@@ -1,0 +1,126 @@
+
+    import Small_Java.lang;
+    import Small_Java.io;
+    protected class_SJ Test{
+        string_SJ b,m,g,l;
+        int_SJ a,d,e,f,c;
+        main_SJ{
+
+            a := 5 + 2 ;
+            d := 10;
+            c := 5;
+            e := 15;
+
+            si( ( a > d ) | ( 31 >= 25 ) & ( 5 > 20 ) | ( 26 != 13 )  )
+            alors{
+                e := a * d / ( a + d );
+                OUT_SJ('hello %d',a);
+
+            }
+            sinon{
+                IN_SJ('%s',b);
+            }
+
+
+        }
+    }
+
+
+program compiled without errors!
+errors: 0
+warnings: 0
+
+
+
+
+***** SHOW TABLE OF SYMBOLE  ******
+b string_SJ declared 1
+m string_SJ declared null
+g string_SJ declared null
+l string_SJ declared null
+a int_SJ declared 7
+d int_SJ declared 10
+e int_SJ declared 0
+f int_SJ declared null
+c int_SJ declared 5
+***** END SHOW TABLE OF SYMBOLE  ******
+
+
+
+*** quad ***
+0-quad(DATA SEGMENT,,,);
+1-quad(DEC,b,string_SJ,);
+2-quad(DEC,m,string_SJ,);
+3-quad(DEC,g,string_SJ,);
+4-quad(DEC,l,string_SJ,);
+5-quad(DEC,a,int_SJ,);
+6-quad(DEC,d,int_SJ,);
+7-quad(DEC,e,int_SJ,);
+8-quad(DEC,f,int_SJ,);
+9-quad(DEC,c,int_SJ,);
+10-quad(DATA ENDS,,,);
+11-quad(CODE SEGMENT,,,);
+12-quad(+,5,2,T0);
+13-quad(:=,T0,,a);
+14-quad(:=,10,,d);
+15-quad(:=,5,,c);
+16-quad(:=,15,,e);
+17-quad(BG,21,a,d);
+18-quad(BL,20,31,25);
+19-quad(BG,21,5,20);
+20-quad(BE,28,26,13);
+21-quad(alors,,,);
+22-quad(+,a,d,T1);
+23-quad(/,d,T1,T2);
+24-quad(*,a,T2,T3);
+25-quad(:=,T3,,e);
+26-quad(WRITE,a,7,);
+27-quad(BR,30,,);
+28-quad(else,,,);
+29-quad(READ,b,,);
+30-quad(END,,,);
+*** end of quads ***
+
+ **** Object code **** 
+DATA SEGMENT
+b DD ?
+m DD ?
+g DD ?
+l DD ?
+a DD ?
+d DD ?
+e DD ?
+f DD ?
+c DD ?
+DATA ENDS
+CODE SEGMENT
+LOAD 5
+ADD 2
+STORE a
+LOAD 10
+STORE d
+LOAD 5
+STORE c
+LOAD 15
+STORE e
+CMP a d
+BG alors
+CMP 31 25
+BL BE
+CMP 5 20
+BG alors
+CMP 26 13
+BE else
+alors: 
+LOAD a
+ADD d
+STORE T1
+LOAD d
+DIV T1
+MULT T2
+STORE e
+OUT a port
+else: 
+IN port b
+CODE ENDS
+ **** End of Object code **** 

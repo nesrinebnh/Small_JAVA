@@ -1,0 +1,38 @@
+protected class_SJ Test{
+        string_SJ b,m,g,g,l;
+        int_SJ d,e,f,c;
+        float_SJ elfhghjfhrjrjk,w;
+        main_SJ{
+            a := 5 + 2 ;
+            d := f + m;
+            c := "25"*"12";
+            e := 12.25;
+            f := 0;
+
+            si( ( a > "salam" ) | ( 31 >= 25 ) & ( 5 > 20 ) | ( 26 != 13 )  )
+            alors{
+                e := a * d + ( a + d ) / f;
+                OUT_SJ('hello %f',a);
+
+            }
+            sinon{
+                IN_SJ('%s',b);
+            }
+
+
+        }
+    }
+
+nes/e1: Double declaration of variable of g
+nes/e2: IDF too long elfhghjfhrjrjk longer than 10
+nes/e4 missing declaration a is used but not declared 
+nes/e6 missing import add import Small_java.lang to your package list
+nes/e5: missing initialization f is not initialized
+nes/e5: missing initialization m is not initialized
+nes/e3: incompatible type in assignment d:=f+m
+nes/e8: operator * not allowed to string in "25"*"12"
+nes/e3: incompatible type in assignment c:="25"*"12"
+nes/e3: incompatible type in assignment e:=12.25
+nes/e8 incompatible type in condition you are comparing -1 with 2 in a>"salam"
+nes/e8 division by zero in  (a+d)/f
+nes/e6 missing import  add import Small_Java.io to your package list
